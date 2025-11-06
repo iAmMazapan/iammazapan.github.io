@@ -51,7 +51,51 @@
   .delay-300 { animation-delay: 0.3s; }
   .delay-400 { animation-delay: 0.4s; }
   .delay-500 { animation-delay: 0.5s; }
+
+  .timeline-item {
+    @apply relative;
+  }
   
+  .timeline-content {
+    @apply relative;
+  }
+  
+  .timeline-icon {
+    @apply flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg;
+  }
+  
+  .tag {
+    @apply text-xs px-3 py-1 bg-gray-800 text-gray-300 rounded-full border border-gray-700 hover:border-accent-blue transition-colors;
+  }
+  
+  /* Desktop: layout alternado */
+  @media (min-width: 768px) {
+    .timeline-left .timeline-content {
+      @apply mr-auto w-5/12 text-left;
+    }
+    
+    .timeline-right .timeline-content {
+      @apply ml-auto w-5/12 text-left;
+    }
+    
+    /* Punto en la línea central */
+    .timeline-item::before {
+      content: '';
+      @apply absolute left-1/2 transform -translate-x-1/2 top-6 w-4 h-4 rounded-full bg-accent-blue border-4 border-dark-bg z-10;
+    }
+    
+    .timeline-right::before {
+      @apply bg-accent-purple;
+    }
+  }
+  
+  /* Mobile: todo a la izquierda */
+  @media (max-width: 767px) {
+    .timeline-content {
+      @apply w-full;
+    }
+  }
+
 }
 
 /* Animaciones */
@@ -73,7 +117,8 @@
     }
   }
 
-  /* Animación de gradiente */
+/* Animación de gradiente */
+
 @keyframes gradient {
     0%, 100% {
       background-position: 0% 50%;
