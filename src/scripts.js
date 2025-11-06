@@ -116,4 +116,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     console.log('🚀 Portfolio cargado correctamente');
     console.log('📍 Secciones detectadas:', sections.length);
+    // ============================================
+    // EFECTO DE ESCRITURA EN EL NOMBRE
+    // ============================================
+    const typingText = document.getElementById('typing-text');
+    const cursor = document.getElementById('cursor');
+    const textToType = 'Piero Nieto';
+    let charIndex = 0;
+
+    function typeWriter() {
+        if (charIndex < textToType.length) {
+            typingText.textContent += textToType.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeWriter, 150);
+        } else {
+            // Cursor parpadeante al terminar
+            cursor.classList.add('animate-pulse');
+        }
+    }
+
+    // Iniciar el efecto después de un pequeño delay
+    setTimeout(typeWriter, 500);
 });
