@@ -23,4 +23,22 @@
   .card {
     @apply bg-dark-card rounded-lg p-6 hover:shadow-xl transition-all duration-300;
   }
+  
+  /* Nuevos estilos de navegacion */
+  .nav-link {
+    @apply text-gray-300 hover:text-white transition-colors relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent-blue transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .nav-link-mobile {
+    @apply text-gray-300 hover:text-accent-blue hover:bg-gray-800/50 px-4 py-2 rounded transition-colors;
+  }
 }
