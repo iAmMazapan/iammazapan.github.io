@@ -1,3 +1,6 @@
+/* -------------------------------------------------------------------------- */
+/* GLOBAL RESET & VARIABLES */
+/* -------------------------------------------------------------------------- */
 
 * {
     margin: 0;
@@ -6,9 +9,8 @@
 }
 
 html {
-    font-size: 19px; /* probablemente está así por defecto */
+    font-size: 19px;
 }
-
 
 :root {
     --bg: #ffffff;
@@ -36,7 +38,10 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Navigation */
+/* -------------------------------------------------------------------------- */
+/* NAVIGATION */
+/* -------------------------------------------------------------------------- */
+
 nav {
     border-bottom: 1px solid var(--border);
     padding: 1.5rem 0;
@@ -82,7 +87,6 @@ nav {
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.2s;
-    position: relative;
 }
 
 .nav-links a:hover,
@@ -101,15 +105,27 @@ nav {
     color: var(--text);
     font-size: 1.3rem;
     cursor: pointer;
-    transition: transform 0.2s;
     padding: 0.5rem;
+    transition: transform 0.2s;
 }
 
 .theme-toggle:hover {
     transform: scale(1.1);
 }
 
-/* Main Content */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text);
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/* MAIN LAYOUT */
+/* -------------------------------------------------------------------------- */
+
 main {
     max-width: 1100px;
     margin: 0 auto;
@@ -117,10 +133,13 @@ main {
     min-height: calc(100vh - 200px);
 }
 
-/* Home Page */
+/* -------------------------------------------------------------------------- */
+/* HOME / HERO SECTION */
+/* -------------------------------------------------------------------------- */
+
 .hero-section {
     display: grid;
-    grid-template-columns: 240px 1fr;  /* se ajusta al tamaño deseado */
+    grid-template-columns: 240px 1fr;
     gap: 3rem;
     margin-bottom: 3rem;
     align-items: start;
@@ -131,39 +150,34 @@ main {
 }
 
 .profile-image {
-    width: 14rem;  /* = 224px (tu requerimiento principal) */
-    max-width: 245px; /* límite permitido */
+    width: 14rem;
     height: 14rem;
+    max-width: 245px;
     max-height: 245px;
     border-radius: 4px;
     object-fit: cover;
 }
 
-
-
 .hero-content h1 {
     font-size: 1.8rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
-    line-height: 1.4;
 }
 
 .hero-content p {
     color: var(--text-secondary);
     margin-bottom: 1rem;
     font-size: 1rem;
-    line-height: 1.7;
 }
 
-.text-content {
-    margin-top: 3rem;
-}
+/* -------------------------------------------------------------------------- */
+/* TEXT SECTIONS */
+/* -------------------------------------------------------------------------- */
 
 .text-content h2 {
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 1.5rem;
-    margin-top: 2.5rem;
+    margin: 2.5rem 0 1.5rem;
 }
 
 .text-content p {
@@ -182,7 +196,10 @@ main {
     text-decoration: underline;
 }
 
-/* Experience Section */
+/* -------------------------------------------------------------------------- */
+/* EXPERIENCE */
+/* -------------------------------------------------------------------------- */
+
 .experience-item {
     margin-bottom: 3rem;
 }
@@ -206,8 +223,8 @@ main {
 
 .experience-org {
     color: var(--text-secondary);
-    margin-bottom: 1rem;
     font-style: italic;
+    margin-bottom: 1rem;
 }
 
 .experience-description {
@@ -215,7 +232,10 @@ main {
     line-height: 1.7;
 }
 
-/* Projects Section */
+/* -------------------------------------------------------------------------- */
+/* PROJECTS */
+/* -------------------------------------------------------------------------- */
+
 .section-title {
     font-size: 2.2rem;
     font-weight: 400;
@@ -229,7 +249,6 @@ main {
     font-weight: 400;
     font-style: italic;
     margin: 3rem 0 2rem;
-    color: var(--text);
 }
 
 .project-item {
@@ -239,10 +258,9 @@ main {
 .project-meta {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
-    flex-wrap: wrap;
-    align-items: center;
 }
 
 .project-year {
@@ -252,8 +270,8 @@ main {
 .project-title-link {
     color: var(--text);
     text-decoration: underline;
-    font-size: 1rem;
     font-weight: 500;
+    font-size: 1rem;
 }
 
 .project-title-link:hover {
@@ -268,21 +286,15 @@ main {
     font-size: 0.8rem;
 }
 
-.project-collaborators {
+.project-collaborators,
+.project-journal,
+.project-description {
     color: var(--text-secondary);
     margin-bottom: 0.5rem;
-    font-size: 0.95rem;
 }
 
 .project-journal {
     font-style: italic;
-    color: var(--text-secondary);
-    margin-bottom: 0.5rem;
-}
-
-.project-description {
-    color: var(--text-secondary);
-    line-height: 1.7;
 }
 
 .tech-list {
@@ -301,7 +313,10 @@ main {
     color: var(--text-secondary);
 }
 
-/* Skills Section */
+/* -------------------------------------------------------------------------- */
+/* SKILLS */
+/* -------------------------------------------------------------------------- */
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -312,7 +327,6 @@ main {
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    color: var(--text);
 }
 
 .skill-list {
@@ -320,7 +334,10 @@ main {
     line-height: 1.9;
 }
 
-/* Hobbies Section */
+/* -------------------------------------------------------------------------- */
+/* HOBBIES */
+/* -------------------------------------------------------------------------- */
+
 .hobbies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -338,75 +355,77 @@ main {
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 0.8rem;
-    color: var(--text);
 }
 
 .hobby-item p {
     color: var(--text-secondary);
+    font-size: 0.95rem;
     line-height: 1.7;
+}
+
+/* -------------------------------------------------------------------------- */
+/* FOOTER */
+/* -------------------------------------------------------------------------- */
+footer {
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
     font-size: 0.95rem;
 }
 
-/* Footer */
-footer {
-    border-top: 1px solid var(--border);
-    padding: 3rem 2rem;
-    margin-top: 4rem;
-}
-
-.footer-content {
-    max-width: 1100px;
+footer .footer-content {
+    max-width: 900px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-}
-
-.footer-section h3 {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    color: var(--text);
-}
-
-.footer-section p,
-.footer-section a {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    line-height: 1.8;
-    text-decoration: none;
-}
-
-.footer-section a:hover {
-    color: var(--accent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .footer-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* horizontal */
+    gap: 1.5rem;
+    flex-wrap: wrap; /* permite que se muevan a otra línea si es necesario */
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
     gap: 0.5rem;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border);
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-}
-
-/* Mobile Menu */
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
+    text-decoration: none;
     color: var(--text);
-    cursor: pointer;
+    transition: opacity 0.2s ease;
 }
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+.footer-links i {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+    stroke: var(--text);
+}
+
+/* Última modificación */
+#last-modified {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* MOBILE */
+/* -------------------------------------------------------------------------- */
 
 @media (max-width: 768px) {
+
     .nav-links {
         display: none;
         position: absolute;
@@ -433,13 +452,9 @@ footer {
     }
 
     .hero-section {
-        display: grid;
-        grid-template-columns: 260px 1fr; /* más espacio para la imagen */
-        gap: 2.5rem; /* separación más cómoda */
-        margin-bottom: 3rem;
-        align-items: start;
+        grid-template-columns: 260px 1fr;
+        gap: 2.5rem;
     }
-
 
     .profile-image {
         width: 150px;
@@ -458,13 +473,9 @@ footer {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+    
 }
 
-/* Page container for routing */
-.page {
-    display: none;
-}
-
-.page.active {
-    display: block;
-}
+/* Routing pages */
+.page { display: none; }
+.page.active { display: block; }
