@@ -52,32 +52,38 @@ nav {
 }
 
 .nav-container {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     font-weight: 400;
     color: var(--accent);
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    text-align: center;
+    flex-shrink: 0;
 }
 
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.2rem;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    flex: 1;
+    justify-content: space-evenly;
     list-style: none;
     align-items: center;
 }
@@ -85,8 +91,9 @@ nav {
 .nav-links a {
     color: var(--text);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.05rem;
     transition: color 0.2s;
+    white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -97,6 +104,7 @@ nav {
 .nav-separator {
     color: var(--text-secondary);
     user-select: none;
+    font-size: 0.7rem;
 }
 
 .theme-toggle,
@@ -106,6 +114,26 @@ nav {
     font-size: 1.4rem;
     color: var(--text);
     cursor: pointer;
+}
+
+.mobile-menu-btn {
+    margin-left: 1.5rem;
+}
+
+.lang-toggle {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.lang-toggle:hover {
+    color: var(--accent);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -375,6 +403,321 @@ footer {
     .footer-content {
         gap: 1.5rem;
     }
+}
+
+/* -------------------------------------------------------------------------- */
+/* PROJECT MEDIA                                                               */
+/* -------------------------------------------------------------------------- */
+
+.project-media {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem 0 0.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+/* -------------------------------------------------------------------------- */
+/* SKILLS                                                                      */
+/* -------------------------------------------------------------------------- */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.skill-category h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    color: var(--text);
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tech-item {
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    padding: 0.3rem 0.7rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    border: 1px solid var(--border);
+}
+
+/* -------------------------------------------------------------------------- */
+/* GALLERY                                                                     */
+/* -------------------------------------------------------------------------- */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-2px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-placeholder {
+    width: 100%;
+    height: 220px;
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.gallery-placeholder i {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--accent);
+}
+
+.gallery-placeholder span {
+    font-size: 0.9rem;
+}
+
+.gallery-caption {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* -------------------------------------------------------------------------- */
+/* LIGHTBOX                                                                    */
+/* -------------------------------------------------------------------------- */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+    cursor: default;
+}
+
+.lightbox-caption {
+    color: #ccc;
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 2rem;
+    cursor: default;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.2s;
+}
+
+.lightbox-close:hover {
+    color: var(--accent);
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 1001;
+    transition: color 0.2s;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    color: var(--accent);
+}
+
+.lightbox-prev {
+    left: 1rem;
+}
+
+.lightbox-next {
+    right: 1rem;
+}
+
+.gallery-item {
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ACHIEVEMENTS TABLE                                                          */
+/* -------------------------------------------------------------------------- */
+
+.achievements-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.achievements-table td {
+    padding: 0.7rem 0.5rem;
+    vertical-align: top;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.achievements-table tr:last-child td {
+    border-bottom: none;
+}
+
+.achievement-year {
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--accent);
+    width: 90px;
+    font-size: 0.9rem;
+    padding-right: 1.2rem !important;
+}
+
+.achievements-table a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.achievements-table a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------------------------------------------------------- */
+/* LISTS                                                                       */
+/* -------------------------------------------------------------------------- */
+
+.hobby-list,
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.hobby-list li,
+.contact-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.hobby-list li:last-child,
+.contact-list li:last-child {
+    border-bottom: none;
+}
+
+.text-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.text-content ul li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.text-content ul li:last-child {
+    border-bottom: none;
+}
+
+.text-content a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.text-content a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------------------------------------------------------- */
+/* LINKS                                                                       */
+/* -------------------------------------------------------------------------- */
+
+.footer-links a,
+.contact-list a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.experience-description a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.experience-description a:hover {
+    text-decoration: underline;
+}
+
+.project-description a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.project-description a:hover {
+    text-decoration: underline;
 }
 
 /* Routing pages */

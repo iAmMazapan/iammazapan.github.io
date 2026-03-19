@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,21 +23,26 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="#" class="logo" data-page="home">Yishar Piero</a>
+            <a href="#" class="logo" data-page="home">Yishar<br>Piero</a>
+            <button class="mobile-menu-btn" id="mobile-toggle">☰</button>
             
             <div class="nav-right">
-                <button class="mobile-menu-btn" id="mobile-toggle">☰</button>
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="#" data-page="home" class="nav-link active">About</a></li>
+                    <li><a href="#" data-page="home" class="nav-link active" data-i18n="nav_about">Sobre mí</a></li>
                     <li class="nav-separator">+</li>
-                    <li><a href="#" data-page="experience" class="nav-link">Experience</a></li>
+                    <li><a href="#" data-page="experience" class="nav-link" data-i18n="nav_experience">Experiencia</a></li>
                     <li class="nav-separator">+</li>
-                    <li><a href="#" data-page="projects" class="nav-link">Projects</a></li>
+                    <li><a href="#" data-page="projects" class="nav-link" data-i18n="nav_projects">Proyectos</a></li>
                     <li class="nav-separator">+</li>
-                    <li><a href="#" data-page="hobbies" class="nav-link">Hobbies</a></li>
+                    <li><a href="#" data-page="leadership" class="nav-link" data-i18n="nav_volunteering">Voluntariado</a></li>
                     <li class="nav-separator">+</li>
-                    <li><a href="#" data-page="contact" class="nav-link">Contact</a></li>
+                    <li><a href="#" data-page="gallery" class="nav-link" data-i18n="nav_gallery">Galería</a></li>
+                    <li class="nav-separator">+</li>
+                    <li><a href="#" data-page="hobbies" class="nav-link" data-i18n="nav_hobbies">Hobbies</a></li>
+                    <li class="nav-separator">+</li>
+                    <li><a href="#" data-page="contact" class="nav-link" data-i18n="nav_contact">Contacto</a></li>
                 </ul>
+                <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">EN</button>
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
                     <span id="theme-icon">☀️</span>
                 </button>
@@ -53,85 +58,59 @@
                     <img src="assets/images/profile/piero.jpg" alt="Yishar Piero Nieto" class="profile-image">
                 </div>
 
-                
                 <div class="hero-content">
-                    <h1>I am a student...</h1>
-                    <p>
-                        and more specifically, I like algorithms, graph theory, and exploring the frontiers of computer science. 
-                        I love studying new topics across all fields of science. In particularly enjoy problems involving graph theory. Outside of tech, I immerse myself in music.
-                    </p>
+                    <h1 data-i18n="hero_title">Soy un estudiante...</h1>
+                    <p data-i18n="hero_desc">apasionado por los algoritmos, la teoría de grafos y las fronteras de las ciencias de la computación. Me gusta estudiar nuevos temas en todos los campos de la ciencia. Disfruto especialmente los problemas que involucran teoría de grafos, computación paralela y GPU computing. Fuera de la tecnología, me sumerjo en la música.</p>
                 </div>
 
             </div>
 
             <div class="text-content">
-                <h2>About Me</h2>
-                    <p>
-                        I am a Computer Science student at Universidad Nacional de San Antonio Abad del Cusco (UNSAAC), passionate about algorithms,
-                        graph theory, and scientific learning. I enjoy understanding complex systems and exploring
-                        new ideas across computing and science.
-                    </p>
+                <h2 data-i18n="about_title">Sobre Mí</h2>
+                    <p data-i18n="about_p1">Soy estudiante de Ciencias de la Computación en la <strong>UNSAAC</strong> (Cusco, Perú), en mi último semestre, culminando mi tesis sobre modelado predictivo arqueológico con Machine Learning y datos geoespaciales. Antes de la universidad, estudié en el <strong>COAR Ayacucho</strong>, un colegio público de alto rendimiento al que ingresé mediante un examen nacional.</p>
 
-                    <p>
-                        I've represented my university in the <strong>ICPC Latin America Regional Contests</strong> (2022–2024),
-                        with official records under my <a href="https://icpc.global/ICPCID/SIFE9U6L1IB3" target="_blank">ICPC ID</a>.
-                        I also attended the <strong>Training Camp Argentina</strong> in 2024 and 2025, training with top
-                        competitive programmers in the region.
-                    </p>
+                    <p data-i18n="about_p2">La programación competitiva es parte fundamental de lo que soy. Representé a la UNSAAC en el <strong>ICPC South America Regional durante tres años consecutivos</strong> (2022–2024) y me convertí en el <strong>competidor mejor rankeado de Codeforces en Cusco</strong> (Expert, máx 1622). Entrené en el <strong>Training Camp Argentina</strong> (2024, 2025) y el <strong>Training Camp Arequipa</strong> (2025).</p>
 
-                    <p>
-                        I contribute to student communities as former leader of the
-                        <a href="https://www.linkedin.com/company/cp-unsaac/" target="_blank"><strong>UNSAAC Competitive Programming Group</strong></a>,
-                        where I taught algorithms and data structures. I’m also part of the ACM Cusco Student Chapter and OmegaUp.
-                    </p>
+                    <p data-i18n="about_p3">Mis intereses de investigación están en <strong>teoría de grafos</strong>, <strong>GPU computing (CUDA)</strong>, <strong>algoritmos paralelos</strong> y ciencias de la computación en general. Me atraen los problemas en la intersección entre teoría y computación de alto rendimiento, y estoy orientándome hacia estudios de posgrado en estas áreas.</p>
 
-                    <p>
-                        Outside of technology, I am a science enthusiast and a music lover. I enjoy studying different scientific fields, playing instruments, and discovering new sounds.
-                    </p>
+                    <p data-i18n="about_p4">En el lado comunitario, cofundé la <strong>CS Cusco Initiative</strong> para llevar educación en CS a provincias rurales andinas, soy voluntario en <a href="https://www.instagram.com/warmitech_cusco/" target="_blank"><strong>WarmiTech Cusco</strong></a> enseñando programación a mujeres jóvenes, lideré el <a href="https://www.linkedin.com/company/cp-unsaac/" target="_blank"><strong>Grupo de Programación Competitiva UNSAAC</strong></a>, y cofundé el Capítulo IEEE CS en la UNSAAC.</p>
+
+                    <p data-i18n="about_p5">Fuera de la computación, toco guitarra, leo sobre ciencia y filosofía, y disfruto explorando nueva música.</p>
 
 
-
-                <h2>Achievements</h2>
-                    <ul>
-                        <li>
-                            <strong>NASA Space Apps Challenge Cusco Winner (2025)</strong> —  
-                            Developed the educational game <strong>FarmGuardians</strong> using NASA Earth data.  
-                            <a href="https://github.com/iAmMazapan/FarmGuardians" target="_blank"> FarmGuardians</a>
-                        </li>
-
-                        <li>
-                            <strong>IEEEXtreme 18.0</strong> — Ranked <strong>Top 5 in Peru</strong> and  
-                            <strong>Top 150 worldwide</strong> under the team name <strong>"Wozmit"</strong>.  
-                            <a href="https://ieeextreme.org/ieeextreme-18-0-ranking/" target="_blank">View ranking</a>
-                        </li>
-
-                        <li>
-                            <strong>CUSCONTEST Champion (2023 & 2024)</strong> —  
-                            Winner of the university’s programming contest, most notably under the team name  
-                            <strong>“Watashi WA choudo nani ga”</strong>.  
-                            <a href="https://omegaup.com/arena/cuscontest-xx/scoreboard/xabGNtJRMdX7JkMfNqvHCZe2rsfHVH" target="_blank">Scoreboard</a>
-                        </li>
-
-                        <li>
-                            <strong>ELECON Programming Contest Winner (2023)</strong> —  
-                            First place in the ELECON international congress programming competition.
-                        </li>
-
-                        <li>
-                            <strong>ENEISOFT Programming Contest (2024)</strong> —  
-                            Achieved <strong>Top 7 in Peru</strong>.
-                        </li>
-
-                        <li>
-                            <strong>ICPC Regional Contest Participant (2022–2024)</strong> —  
-                            Represented UNSAAC in multiple official ICPC regional events.  
-                            <a href="https://icpc.global/ICPCID/SIFE9U6L1IB3" target="_blank">ICPC Profile</a>
-                        </li>
-
-                        <li>
-                            <strong>Training Camp Argentina</strong> — Attended in both 2024 (Rosario) and 2025 (Santa Fe).
-                        </li>
-                    </ul>
+                <h2 data-i18n="achievements_title">Logros</h2>
+                    <table class="achievements-table">
+                        <tbody>
+                            <tr>
+                                <td class="achievement-year">2025</td>
+                                <td data-i18n="ach_nasa"><strong>NASA Space Apps Challenge Cusco — Ganador</strong>. Desarrollé <a href="https://github.com/iAmMazapan/FarmGuardians" target="_blank">FarmGuardians</a>, un juego educativo usando datos de la NASA.</td>
+                            </tr>
+                            <tr>
+                                <td class="achievement-year">2024</td>
+                                <td data-i18n="ach_ieee"><strong>IEEEXtreme 18.0</strong> — Top 5 en Perú, Top 150 mundial. Equipo "Wozmit". <a href="https://ieeextreme.org/ieeextreme-18-0-ranking/" target="_blank">Ranking</a></td>
+                            </tr>
+                            <tr>
+                                <td class="achievement-year">2024</td>
+                                <td data-i18n="ach_cuscontest"><strong>Campeón CUSCONTEST</strong> (2023 &amp; 2024) — Ganador como equipo "Watashi WA choudo nani ga". <a href="https://omegaup.com/arena/cuscontest-xx/scoreboard/xabGNtJRMdX7JkMfNqvHCZe2rsfHVH" target="_blank">Scoreboard</a></td>
+                            </tr>
+                            <tr>
+                                <td class="achievement-year">2024</td>
+                                <td data-i18n="ach_eneisoft"><strong>ENEISOFT</strong> — Top 7 en Perú.</td>
+                            </tr>
+                            <tr>
+                                <td class="achievement-year">2023</td>
+                                <td data-i18n="ach_elecon"><strong>ELECON — Ganador</strong>. Primer lugar en la competencia de programación del congreso internacional.</td>
+                            </tr>
+                            <tr>
+                                <td class="achievement-year">2022–2024</td>
+                                <td data-i18n="ach_icpc"><strong>ICPC South America Regional</strong> — Representé a UNSAAC en tres ediciones consecutivas. <a href="https://icpc.global/ICPCID/SIFE9U6L1IB3" target="_blank">Perfil ICPC</a></td>
+                            </tr>
+                            <tr>
+                                <td class="achievement-year">2024–2025</td>
+                                <td data-i18n="ach_camp"><strong>Training Camp Argentina</strong> — Rosario (2024) y Santa Fe (2025).</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
             </div>
         </div>  
@@ -139,92 +118,143 @@
 
         <!-- Experience Page -->
         <div id="experience-page" class="page">
-            <h1 class="section-title">Experience & Education</h1>
+            <h1 class="section-title" data-i18n="exp_title">Experiencia y Educación</h1>
 
-            <!-- Education -->
-            <div class="experience-item">
-                <h3 class="experience-title">Bachelor in Computer Science</h3>
-                <div class="experience-org">National University of San Antonio Abad of Cusco, Cusco, Peru</div>
-                <span class="experience-date">2020 - 2025</span>
-            </div>
-
-            <!-- Work Experience / Volunteering -->
-            <div class="experience-item">
-                <h3 class="experience-title">Web Development Intern</h3>
-                <div class="experience-org">Tikaymi, Cusco, Peru</div>
-                <span class="experience-date">May 2025 - Oct 2025</span>
-                <p class="experience-description">
-                    Document Management System — Django, SQL, Vue.js, Docker, RESTful APIs. Developed a system for managing documents in a tourism company, contributing to both backend and frontend development within an agile team.
-                </p>
-            </div>
+            <h2 class="subsection-title" data-i18n="exp_work">Experiencia Laboral</h2>
 
             <div class="experience-item">
-                <h3 class="experience-title">Student Ambassador</h3>
-                <div class="experience-org">IEEE Cusco, Region 9</div>
-                <span class="experience-date">2024 - 2025</span>
-                <p class="experience-description">
-                    Hosted the IEEEXtreme 10.8 at Cusco, promoted programming competitions, managed courses, and organized workshops for student participation.
-                </p>
+                <h3 class="experience-title">GeoAI Developer</h3>
+                <div class="experience-org">Ruwark (Consultoría Arqueológica), Cusco, Perú</div>
+                <span class="experience-date" data-i18n="exp_ruwark_date">Enero 2026 – Presente</span>
+                <p class="experience-description" data-i18n="exp_ruwark_desc">Construí un modelo predictivo para descubrimiento de sitios arqueológicos usando scikit-learn y XGBoost, entrenado con features geoespaciales derivadas de DEMs satelitales (GDAL, Rasterio, GeoPandas). Integré Google Gemini API para extracción automatizada de datos de informes arqueológicos. Contribuí al backend de microservicios (Laravel, Node.js, Docker) y frontend Next.js/React.</p>
+                <div class="tech-list">
+                    <span class="tech-item">Python</span>
+                    <span class="tech-item">scikit-learn</span>
+                    <span class="tech-item">XGBoost</span>
+                    <span class="tech-item">GDAL</span>
+                    <span class="tech-item">GeoPandas</span>
+                    <span class="tech-item">Laravel</span>
+                    <span class="tech-item">Node.js</span>
+                    <span class="tech-item">Next.js</span>
+                    <span class="tech-item">Docker</span>
+                </div>
             </div>
 
             <div class="experience-item">
-                <h3 class="experience-title">Student Lead</h3>
-                <div class="experience-org">Google Peru Student Summit, Cusco</div>
-                <span class="experience-date">September 2024</span>
-                <p class="experience-description">
-                    Collaborated with OmegaUp and Google staff to deliver a successful summit for 150 students, managing logistics and programmatic tasks.
-                </p>
+                <h3 class="experience-title">Full-Stack Developer</h3>
+                <div class="experience-org">Transzela, Cusco, Perú</div>
+                <span class="experience-date" data-i18n="exp_transzela_date">Noviembre 2025 – Enero 2026</span>
+                <p class="experience-description" data-i18n="exp_transzela_desc">Desarrollé un sistema de facturación electrónica con frontend en Angular y backend en C#/.NET. Implementé endpoints REST API e integré la pasarela de pago Izipay.</p>
+                <div class="tech-list">
+                    <span class="tech-item">Angular</span>
+                    <span class="tech-item">C#</span>
+                    <span class="tech-item">.NET</span>
+                    <span class="tech-item">REST APIs</span>
+                    <span class="tech-item">Izipay</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="experience-title" data-i18n="exp_tikaymi_title">Practicante de Desarrollo Web</h3>
+                <div class="experience-org">Tikaymi, Cusco, Perú</div>
+                <span class="experience-date" data-i18n="exp_tikaymi_date">Mayo 2025 – Noviembre 2025</span>
+                <p class="experience-description" data-i18n="exp_tikaymi_desc">Construí un sistema de gestión documental desplegado en producción. APIs REST con Django, frontend con Vue.js, contenedorizado con Docker en ambientes de producción y staging. Metodología ágil con Scrum.</p>
+                <div class="tech-list">
+                    <span class="tech-item">Django</span>
+                    <span class="tech-item">Vue.js</span>
+                    <span class="tech-item">Docker</span>
+                    <span class="tech-item">PostgreSQL</span>
+                    <span class="tech-item">Git</span>
+                </div>
+            </div>
+
+            <h2 class="subsection-title" data-i18n="exp_education">Educación</h2>
+
+            <div class="experience-item">
+                <h3 class="experience-title" data-i18n="exp_unsaac_title">Bachiller en Ciencias de la Computación</h3>
+                <div class="experience-org">Universidad Nacional de San Antonio Abad del Cusco (UNSAAC)</div>
+                <span class="experience-date" data-i18n="exp_unsaac_date">2020 – 2026 (último semestre)</span>
+                <p class="experience-description" data-i18n="exp_unsaac_desc">Tesis: Modelado predictivo de potencial arqueológico usando Machine Learning y datos geoespaciales. Miembro del ACM Student Chapter e IEEE Computer Society.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="experience-title" data-i18n="exp_coar_title">COAR Ayacucho — Ciencias</h3>
+                <div class="experience-org" data-i18n="exp_coar_org">Colegio de Alto Rendimiento (Escuela Pública Nacional de Alto Rendimiento), Ayacucho, Perú</div>
+                <span class="experience-date">2017 – 2019</span>
+                <p class="experience-description" data-i18n="exp_coar_desc">Selección nacional altamente competitiva para estudiantes de alto potencial de familias de bajos recursos. Currículo STEM intensivo con enfoque en pensamiento crítico.</p>
             </div>
         </div>
 
 
         <!-- Projects Page -->
         <div id="projects-page" class="page">
-            <h1 class="section-title">Projects</h1>
+            <h1 class="section-title" data-i18n="proj_title">Proyectos</h1>
 
-            <!-- Major Projects -->
             <div class="project-item">
-                <h3 class="project-title">Estimation of Optimal Hardness in Metal Alloys</h3>
-                <div class="project-org">UNSAAC, Cusco, Peru</div>
-                <span class="project-year">February 2024</span>
-                <p class="project-description">
-                    Developed a model combining multilinear regression with genetic algorithms to optimize alloy hardness. Improved hardness by 15%, achieving 0.02 MSE using Python (Pandas, Numpy, Scikit-learn).
-                </p>
+                <h3 class="project-title" data-i18n="proj_arq_title">Modelado Arqueológico Predictivo — ML + GIS</h3>
+                <div class="project-org" data-i18n="proj_arq_org">Investigación Independiente / Tesis UNSAAC</div>
+                <span class="project-year" data-i18n="proj_arq_year">2025 – Presente</span>
+                <p class="project-description" data-i18n="proj_arq_desc">Pipeline de ciencia de datos reproducible de extremo a extremo para predecir ubicaciones de sitios arqueológicos. Organizado en 4 etapas de Jupyter Notebooks: adquisición de datos, ingeniería de features desde DEMs satelitales, entrenamiento de modelos (scikit-learn, XGBoost) y visualización geoespacial. Dataset: ~27,000 muestras balanceadas a 30m de resolución. Publicación planeada para ACM SIGSPATIAL o similar. <a href="https://github.com/iAmMazapan/arqueologia-predictiva" target="_blank">[Repo]</a></p>
+                <img src="assets/images/region_nazca_ica.png" alt="Modelo arqueológico predictivo — Región Nazca/Ica" class="project-media">
                 <div class="tech-list">
                     <span class="tech-item">Python</span>
-                    <span class="tech-item">Pandas</span>
-                    <span class="tech-item">Numpy</span>
-                    <span class="tech-item">Scikit-learn</span>
-                    <span class="tech-item">Genetic Algorithms</span>
+                    <span class="tech-item">scikit-learn</span>
+                    <span class="tech-item">XGBoost</span>
+                    <span class="tech-item">GeoPandas</span>
+                    <span class="tech-item">GDAL</span>
+                    <span class="tech-item">Rasterio</span>
+                    <span class="tech-item">Folium</span>
+                    <span class="tech-item">Jupyter</span>
                 </div>
             </div>
 
             <div class="project-item">
-                <h3 class="project-title">FarmGuardians Educational Video Game</h3>
-                <div class="project-org">NASA Space Apps Challenge, Cusco, Peru</div>
-                <span class="project-year">2024 - 2025</span>
-                <p class="project-description">
-                    Winner of NASA Space Apps Challenge 2024 & 2025. Developed an educational game transforming NASA Earth observation data (NDVI, temperature, soil moisture) into interactive agricultural missions. Contributed as Data Scientist, implementing data pipelines and game logic. 
-                    <a href="https://github.com/iAmMazapan/FarmGuardians" target="_blank">[Repo]</a> | 
-                    <a href="https://www.youtube.com/watch?v=3FlgNu1J8EA" target="_blank">[Demo]</a>
-                </p>
+                <h3 class="project-title" data-i18n="proj_farm_title">FarmGuardians — Videojuego Educativo</h3>
+                <div class="project-org">NASA Space Apps Challenge, Cusco, Perú</div>
+                <span class="project-year">2024 – 2025</span>
+                <p class="project-description" data-i18n="proj_farm_desc">Ganador del NASA Space Apps Challenge Cusco (2024 &amp; 2025). Juego educativo basado en datos de observación terrestre de la NASA (NDVI, temperatura, humedad del suelo) transformados en misiones agrícolas interactivas. Lideré el equipo de desarrollo. <a href="https://github.com/iAmMazapan/FarmGuardians" target="_blank">[Repo]</a> | <a href="https://www.youtube.com/watch?v=3FlgNu1J8EA" target="_blank">[Demo]</a></p>
                 <div class="tech-list">
                     <span class="tech-item">Unity</span>
-                    <span class="tech-item">VR</span>
                     <span class="tech-item">C#</span>
                     <span class="tech-item">NASA APIs</span>
+                    <span class="tech-item">Data Pipelines</span>
                     <span class="tech-item">Game Design</span>
                 </div>
             </div>
 
             <div class="project-item">
-                <h3 class="project-title">Competitive Programming Repository</h3>
-                <div class="project-org">Personal GitHub</div>
-                <span class="project-year">Ongoing</span>
-                <p class="project-description">
-                    Repository with my competitive programming solutions, problem-solving techniques, and practice code for contests like ICPC, IEEEXtreme, and CUSCONTEST.
-                    <a href="https://github.com/iAmMazapan/Competitive-Programming" target="_blank">[Repo]</a>
-                </p>
+                <h3 class="project-title" data-i18n="proj_alloys_title">Estimación de Dureza Óptima en Aleaciones Metálicas</h3>
+                <div class="project-org">UNSAAC, Cusco, Perú</div>
+                <span class="project-year" data-i18n="proj_alloys_year">Febrero 2024</span>
+                <p class="project-description" data-i18n="proj_alloys_desc">Combiné regresión multilineal con algoritmos genéticos para optimizar la dureza de aleaciones. Mejoré la métrica objetivo en 15%, alcanzando 0.02 MSE.</p>
+                <div class="tech-list">
+                    <span class="tech-item">Python</span>
+                    <span class="tech-item">Pandas</span>
+                    <span class="tech-item">NumPy</span>
+                    <span class="tech-item">scikit-learn</span>
+                    <span class="tech-item">Genetic Algorithms</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3 class="project-title" data-i18n="proj_gol_title">Juego de la Vida de Conway — Autómata Celular</h3>
+                <div class="project-org" data-i18n="proj_gol_org">Proyecto Personal</div>
+                <span class="project-year">2025</span>
+                <p class="project-description" data-i18n="proj_gol_desc">Implementación interactiva del Juego de la Vida de Conway con Pygame. Incluye Gosper Glider Guns, osciladores Pentadecathlon, HUD en tiempo real, pausa/reanudación y celdas toggle con clic. Incluye generador de GIFs. <a href="https://github.com/iAmMazapan/game-of-life" target="_blank">[Repo]</a></p>
+                <img src="assets/images/game_of_life.gif" alt="Game of Life demo" class="project-media">
+                <div class="tech-list">
+                    <span class="tech-item">Python</span>
+                    <span class="tech-item">Pygame</span>
+                    <span class="tech-item">Cellular Automata</span>
+                    <span class="tech-item">imageio</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3 class="project-title" data-i18n="proj_cp_title">Repositorio de Programación Competitiva</h3>
+                <div class="project-org" data-i18n="proj_cp_org">GitHub Personal</div>
+                <span class="project-year" data-i18n="proj_cp_year">En curso</span>
+                <p class="project-description" data-i18n="proj_cp_desc">Soluciones, técnicas y código de práctica para ICPC, IEEEXtreme, CUSCONTEST y Codeforces. <a href="https://github.com/iAmMazapan/Competitive-Programming" target="_blank">[Repo]</a></p>
                 <div class="tech-list">
                     <span class="tech-item">C++</span>
                     <span class="tech-item">Python</span>
@@ -235,49 +265,158 @@
         </div>
 
 
-        <!-- Hobbies Page - Minimalista versión lista -->
-        <div id="hobbies-page" class="page">
-            <h1 class="section-title">Hobbies & Interests</h1>
+        <!-- Volunteering Page -->
+        <div id="leadership-page" class="page">
+            <h1 class="section-title" data-i18n="vol_title">Voluntariado y Comunidad</h1>
 
-            <p style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;">
-                When I'm not coding or solving algorithmic puzzles, I enjoy activities that help me stay creative, balanced, and continuously learning.
-            </p>
+            <div class="experience-item">
+                <h3 class="experience-title" data-i18n="vol_cs_title">CS Cusco Initiative — Cofundador</h3>
+                <div class="experience-org" data-i18n="vol_cs_org">Proyecto educativo sin fines de lucro, Cusco, Perú</div>
+                <span class="experience-date" data-i18n="vol_cs_date">2026 – Presente</span>
+                <p class="experience-description" data-i18n="vol_cs_desc">Cofundé una iniciativa sin fines de lucro para llevar educación en ciencias de la computación a jóvenes de provincias rurales de Cusco (provincias altas y Valle Sagrado). El programa incluye charlas motivacionales, cursos introductorios de Python y entrenamiento en programación competitiva. Asesorado por Edison Ttito Concha (SWE @ Amazon Brazil).</p>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="experience-title" data-i18n="vol_boot_title">Bootcamp de Programación Competitiva — Instructor Principal</h3>
+                <div class="experience-org" data-i18n="vol_boot_org">UNSAAC, respaldado por el Decano y Capítulo ACM</div>
+                <span class="experience-date">2025</span>
+                <p class="experience-description" data-i18n="vol_boot_desc">Diseñé e impartí un bootcamp de varios días para estudiantes de pregrado cubriendo algoritmos, grafos, programación dinámica y estrategias de competencia. Mejoré la participación y rendimiento de los equipos UNSAAC en competencias regionales.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="experience-title" data-i18n="vol_warmi_title">WarmiTech Cusco — Instructor de Programación (Voluntario)</h3>
+                <div class="experience-org"><a href="https://www.instagram.com/warmitech_cusco/" target="_blank">WarmiTech Cusco</a></div>
+                <span class="experience-date">2024 – 2025</span>
+                <p class="experience-description" data-i18n="vol_warmi_desc">Instructor voluntario enseñando programación y programación competitiva introductoria a mujeres jóvenes, promoviendo la participación femenina en STEM.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="experience-title" data-i18n="vol_google_title">Google Peru Student Summit — Student Lead</h3>
+                <div class="experience-org">OmegaUp + Hola Cloud (Google), Cusco</div>
+                <span class="experience-date" data-i18n="vol_google_date">Septiembre 2024</span>
+                <p class="experience-description" data-i18n="vol_google_desc">Coordiné logística y guié a más de 150 asistentes en un summit tecnológico patrocinado por Google en Cusco. Certificado por Andrea Santillana (Directora de OmegaUp) y Geraldine Francia (Hola Cloud Global Lead).</p>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="experience-title" data-i18n="vol_ieee_title">Capítulo IEEE CS — Cofundador &amp; Embajador IEEEXtreme</h3>
+                <div class="experience-org">IEEE UNSAAC, Región 9</div>
+                <span class="experience-date">2023 – 2025</span>
+                <p class="experience-description" data-i18n="vol_ieee_desc">Cofundé el Capítulo Estudiantil de IEEE Computer Society en UNSAAC. Organicé IEEEXtreme 18.0 en Cusco y promoví la programación competitiva en la Región 9 de IEEE.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="experience-title" data-i18n="vol_cpunsaac_title">CP UNSAAC — Ex Líder</h3>
+                <div class="experience-org"><a href="https://www.linkedin.com/company/cp-unsaac/" target="_blank" data-i18n="vol_cpunsaac_org">Grupo de Programación Competitiva, UNSAAC</a></div>
+                <span class="experience-date">2022 – 2024</span>
+                <p class="experience-description" data-i18n="vol_cpunsaac_desc">Lideré el grupo de programación competitiva de la universidad. Enseñé algoritmos y estructuras de datos, organicé sesiones de entrenamiento y concursos de práctica para preparación ICPC.</p>
+            </div>
+        </div>
+
+
+        <!-- Gallery Page -->
+        <div id="gallery-page" class="page">
+            <h1 class="section-title" data-i18n="gallery_title">Galería</h1>
+
+            <p style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;" data-i18n="gallery_desc">Momentos que marcaron mi camino — competencias, comunidades y experiencias.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox(0)">
+                    <img src="assets/images/gallery/ICPC-UNSAAC-2025.jpg" alt="ICPC UNSAAC 2025">
+                    <p class="gallery-caption" data-i18n="gal_0">ICPC South America Regional 2025 — Delegación UNSAAC</p>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <img src="assets/images/gallery/ICPC-TEAM-2025-El_bendito_Fulkerson.jpg" alt="ICPC Team El Bendito Fulkerson">
+                    <p class="gallery-caption" data-i18n="gal_1">Equipo ICPC "El Bendito Fulkerson" — Regional 2025</p>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <img src="assets/images/gallery/ICPC-polos.jpg" alt="ICPC Polos">
+                    <p class="gallery-caption" data-i18n="gal_2">ICPC — Representando a UNSAAC con orgullo</p>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="assets/images/gallery/primer-icpc-team-Maqueentosh.jpg" alt="First ICPC Team Maqueentosh">
+                    <p class="gallery-caption" data-i18n="gal_3">Primer equipo ICPC "Maqueentosh" — Donde comenzó el camino</p>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(4)">
+                    <img src="assets/images/gallery/Primer-RPC-Con-6-preguntas-globos.jpg" alt="First RPC with 6 balloons">
+                    <p class="gallery-caption" data-i18n="gal_4">Primer RPC — 6 problemas resueltos, globos ganados 🎈</p>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(5)">
+                    <img src="assets/images/gallery/cuscontestXX.jpg" alt="CUSCONTEST XX Champion">
+                    <p class="gallery-caption" data-i18n="gal_5">Campeón CUSCONTEST XX — 10 problemas, 1° de 54+ equipos</p>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(6)">
+                    <img src="assets/images/gallery/Hackaton-NASA.jpg" alt="NASA Space Apps Challenge">
+                    <p class="gallery-caption" data-i18n="gal_6">NASA Space Apps Challenge — Equipo ganador FarmGuardians</p>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(7)">
+                    <img src="assets/images/gallery/Training-Camp-Santa-Fe.jpg" alt="Training Camp Argentina Santa Fe">
+                    <p class="gallery-caption" data-i18n="gal_7">Training Camp Argentina 2025 — Santa Fe</p>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(8)">
+                    <img src="assets/images/gallery/Primer-Equipo-Pancito.jpg" alt="Primer Equipo Pancito">
+                    <p class="gallery-caption" data-i18n="gal_8">Equipo "Pancito" — El primer equipo de programación competitiva</p>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(9)">
+                    <img src="assets/images/gallery/warmitech.png" alt="WarmiTech Cusco">
+                    <p class="gallery-caption" data-i18n="gal_9">WarmiTech Cusco — Enseñando programación a mujeres jóvenes</p>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(10)">
+                    <img src="assets/images/gallery/phawai.jpg" alt="PhawAI + TaReCDa 2025">
+                    <p class="gallery-caption" data-i18n="gal_10">PhawAI + TaReCDa 2025 — Workshop de Investigación en IA, UCSP Arequipa</p>
+                </div>
+            </div>
+
+            <!-- Lightbox overlay -->
+            <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+                <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+                <button class="lightbox-prev" onclick="changeLightbox(event, -1)">&#10094;</button>
+                <img id="lightbox-img" class="lightbox-img" src="" alt="">
+                <p id="lightbox-caption" class="lightbox-caption"></p>
+                <button class="lightbox-next" onclick="changeLightbox(event, 1)">&#10095;</button>
+            </div>
+        </div>
+
+
+        <!-- Hobbies Page -->
+        <div id="hobbies-page" class="page">
+            <h1 class="section-title" data-i18n="hobbies_title">Hobbies e Intereses</h1>
+
+            <p style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;" data-i18n="hobbies_desc">Cuando no estoy programando o resolviendo problemas algorítmicos, disfruto de actividades que me ayudan a mantenerme creativo, equilibrado y en constante aprendizaje.</p>
 
             <ul class="hobby-list">
-                <li>
-                    <strong>Reading:</strong> Novels, literature in general, a bit of philosophy and science. Helps me broaden perspectives and deepen understanding of ideas.
-                </li>
-                <li>
-                    <strong>Music & Guitar:</strong> Exploring different genres, especially EDM and rock. Playing guitar is a way to unwind and express creativity.
-                </li>
-                <li>
-                    <strong>Puzzle Solving:</strong> Rubik's cubes and other mechanical puzzles. Complements my interest in algorithms by finding patterns and optimizing solutions.
-                </li>
-                <li>
-                    <strong>Films & Series:</strong> Open to any good recommendations. I’m just starting to appreciate the seventh art and enjoy exploring storytelling and cinematography.
-                </li>
-                <li>
-                    <strong>Video Games:</strong> MOBAs and adventure games. Fascinating both as entertainment and as studies in game mechanics and strategy.
-                </li>
+                <li data-i18n="hobby_reading"><strong>Lectura:</strong> Novelas, literatura en general, algo de filosofía y ciencia. Me ayuda a ampliar perspectivas y profundizar en las ideas.</li>
+                <li data-i18n="hobby_music"><strong>Música y Guitarra:</strong> Explorando diferentes géneros, especialmente EDM y rock. Tocar guitarra es una forma de relajarme y expresar creatividad.</li>
+                <li data-i18n="hobby_puzzles"><strong>Puzzles:</strong> Cubos de Rubik y otros puzzles mecánicos. Complementa mi interés en algoritmos al encontrar patrones y optimizar soluciones.</li>
+                <li data-i18n="hobby_films"><strong>Cine y Series:</strong> Abierto a buenas recomendaciones. Estoy empezando a apreciar el séptimo arte y disfruto explorar narrativa y cinematografía.</li>
+                <li data-i18n="hobby_games"><strong>Videojuegos:</strong> MOBAs y juegos de aventura. Fascinantes tanto como entretenimiento como por el estudio de mecánicas de juego y estrategia.</li>
             </ul>
         </div>
 
 
-
         <!-- Contact Page -->
         <div id="contact-page" class="page">
-            <h1 class="section-title">Contact</h1>
+            <h1 class="section-title" data-i18n="contact_title">Contacto</h1>
 
-            <p style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;">
-                Always happy to connect with fellow programmers, researchers, or anyone passionate about algorithms and competitive programming. Feel free to reach out!
-            </p>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;" data-i18n="contact_desc">Siempre feliz de conectar con otros programadores, investigadores o cualquier persona apasionada por los algoritmos y la programación competitiva. ¡No dudes en escribirme!</p>
 
             <ul class="contact-list">
                 <li><strong>Email:</strong> <a href="mailto:pieronietocoaraya@gmail.com">pieronietocoaraya@gmail.com</a></li>
                 <li><strong>GitHub:</strong> <a href="https://github.com/iAmMazapan" target="_blank">iAmMazapan</a></li>
                 <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yishar-piero-nieto-barrientos-2bb954277" target="_blank">Yishar Piero Nieto Barrientos</a></li>
-                <li><strong>Codeforces:</strong> <a href="https://codeforces.com/profile/SoldierOfLove" target="_blank">SoldierOfLove</a></li>
-                <li><strong>Location:</strong> Cusco, Peru</li>
+                <li><strong>Codeforces:</strong> <a href="https://codeforces.com/profile/SoldierOfLove" target="_blank">SoldierOfLove (Expert, máx 1622)</a></li>
+                <li><strong>ICPC:</strong> <a href="https://icpc.global/ICPCID/SIFE9U6L1IB3" target="_blank">Perfil ICPC Global</a></li>
+                <li><strong>OmegaUp:</strong> <a href="https://omegaup.com/profile/Mazapan_" target="_blank">Mazapan_</a></li>
+                <li><strong data-i18n="contact_location">Ubicación:</strong> Cusco, Perú 🇵🇪</li>
             </ul>
         </div>
 
@@ -285,30 +424,23 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content simple">
-            <!-- <p>© 2025 Piero Nieto — Built with HTML, CSS & JS</p> -->
-
             <div class="footer-links">
                 <a href="https://github.com/iAmMazapan" target="_blank">
                     <i data-lucide="github"></i>
-                    <span>GitHub Profile</span>
+                    <span>GitHub</span>
                 </a>
-
                 <a href="https://codeforces.com/profile/SoldierOfLove" target="_blank">
                     <i data-lucide="code-2"></i>
-                    <span>Codeforces Profile</span>
+                    <span>Codeforces</span>
                 </a>
-
                 <a href="https://www.linkedin.com/in/yishar-piero-nieto-barrientos-2bb954277" target="_blank">
                     <i data-lucide="linkedin"></i>
-                    <span>LinkedIn Profile</span>
+                    <span>LinkedIn</span>
                 </a>
             </div>
-
-            <p id="last-modified"></p>
         </div>
     </footer>
 
-
-
     <script src="js/main.js"></script>
 </body>
+</html>
