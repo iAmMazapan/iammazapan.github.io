@@ -127,7 +127,7 @@ const translations = {
 // LANGUAGE TOGGLE
 // ============================================================================
 
-let currentLang = localStorage.getItem('lang') || 'es';
+let currentLang = localStorage.getItem('lang') || 'en';
 const langToggle = document.getElementById('lang-toggle');
 
 // Store Spanish originals on first load
